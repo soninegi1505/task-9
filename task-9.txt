@@ -1,0 +1,33 @@
+// Javascript prototype method named begetduplicate which extends array prototype, to find duplicate values from array 
+irrespective of their datatypes.
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript begetduplicate prototype.</title>
+</head>
+<body>
+	<script type="text/javascript">
+		Array.prototype.begetduplicate = function() {
+			gnarray = this.slice().sort();
+			var dup = [];
+			for(var i=0;i<this.length;i++){
+				if(gnarray[i + 1]==gnarray[i]){
+					dup.push(gnarray[i]);
+				}	
+		
+				
+			}
+			console.log(dup);
+		
+
+			
+		};
+		
+		sampleinput = [1,2,4,5,2,5];
+		sampleinput.begetduplicate();
+	</script>
+
+</body>
+</html>
